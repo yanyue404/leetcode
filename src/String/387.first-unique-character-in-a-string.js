@@ -23,5 +23,10 @@ var firstUniqChar2 = function (s) {
       obj[s[i]] = 1;
     }
   }
-  return s.split("").findIndex((v) => obj[v] === 1);
+  return s.split('').findIndex((v) => obj[v] === 1);
+};
+
+module.exports = {
+  firstUniqChar,
+  firstUniqChar2,
 };

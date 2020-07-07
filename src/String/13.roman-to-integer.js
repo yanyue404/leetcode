@@ -37,17 +37,17 @@ var romanToInt999 = function (s) {
 
   const rules = (start, next) => {
     const obj = {
-      "1.5": 4,
-      "1.10": 9,
-      "10.50": 40,
-      "10.100": 90,
-      "100.500": 400,
-      "100.1000": 900,
+      '1.5': 4,
+      '1.10': 9,
+      '10.50': 40,
+      '10.100': 90,
+      '100.500': 400,
+      '100.1000': 900,
     };
-    let key = start + "." + next;
+    let key = start + '.' + next;
     return obj[key];
   };
-  var arr = s.split("");
+  var arr = s.split('');
   const temp = [];
   for (let i = 0; i < arr.length; i++) {
     let current = toN(arr[i]);
@@ -76,4 +76,9 @@ var romanToInt999 = function (s) {
     return arrSum;
   };
   return getSum(result);
+};
+
+module.exports = {
+  romanToInt,
+  romanToInt999,
 };

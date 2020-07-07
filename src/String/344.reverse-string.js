@@ -1,4 +1,4 @@
-/** eg:  ["h","e","l","l","o"] => ["o","l","l","e","h"]
+/**
  * @param {character[]} s
  * @return {void} Do not return anything, modify s in-place instead.
  */
@@ -18,4 +18,9 @@ var reverseString2 = function (s) {
   for (let i = 0; i < length / 2; i++) {
     [s[i], s[length - i - 1]] = [s[length - i - 1], s[i]];
   }
+};
+
+module.exports = {
+  reverseString,
+  reverseString2,
 };

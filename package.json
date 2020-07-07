@@ -1,0 +1,49 @@
+{
+  "name": "leetcode",
+  "version": "0.0.1",
+  "description": "以专题为单位的 leetcode 算法学习",
+  "main": "index.js",
+  "scripts": {
+    "commitmsg": "commitlint -E HUSKY_GIT_PARAMS",
+    "prettier": "prettier --write \"./src/*.{js,jsx,vue,css,html,scss,md,json}\"",
+    "test": "mocha"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{html,md,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "test/*.{js}": [
+      "prettier --write",
+      "npm run test",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanyue404/leetcode.git"
+  },
+  "keywords": [
+    "leetcode"
+  ],
+  "author": "yanyue404",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yanyue404/leetcode/issues"
+  },
+  "homepage": "https://github.com/yanyue404/leetcode#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
+    "chai": "^4.2.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "mocha": "^8.0.1",
+    "prettier": "^2.0.5"
+  }
+}
