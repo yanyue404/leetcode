@@ -8,7 +8,7 @@
     "prettier": "prettier --write \"./src/*.{js,jsx,vue,css,html,scss,md,json}\"",
     "coverage": "node_modules/.bin/nyc --reporter=html --reporter=text node_modules/mocha/bin/_mocha",
     "upload-coverage": "nyc report --reporter json && codecov -f ./coverage/coverage-final.json",
-    "test": "mocha"
+    "test": "mocha --require babel-register --bail"
   },
   "husky": {
     "hooks": {
@@ -42,6 +42,8 @@
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^9.0.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
     "chai": "^4.2.0",
     "codecov": "^3.7.0",
     "husky": "^4.2.5",

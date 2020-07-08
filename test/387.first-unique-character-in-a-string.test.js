@@ -13,6 +13,9 @@ describe('firstUniqChar', function () {
   it('should return 2', function () {
     expect(firstUniqChar('loveleetcode')).to.equal(2);
   });
+  it('should return -1', function () {
+    expect(firstUniqChar('')).to.equal(-1);
+  });
 });
 
 describe('firstUniqChar2', function () {
@@ -21,5 +24,8 @@ describe('firstUniqChar2', function () {
   });
   it('should return 2', function () {
     expect(firstUniqChar2('loveleetcode')).to.equal(2);
+  });
+  it('should return -1', function () {
+    expect(firstUniqChar2('')).to.equal(-1);
   });
 });
