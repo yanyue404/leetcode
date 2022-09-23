@@ -4,7 +4,17 @@
 
 ## 介绍
 
-以专题为单位的学习。目前正在 { String 专题 } { Array 专题 }
+[yanyue404](https://leetcode.cn/u/yanyue404/) 以专题为单位的学习。目前正在 { String 专题 } { Array 专题 }
+
+## String 专题
+
+- 3. 无重复字符的最长子串
+- 13.roman-to-integer 罗马数字转整数
+
+## Array 专题
+
+1. Two Sum 两数之和
+2. Remove Duplicates from Sorted Array 删除有序数组中的重复项
 
 #### 参考链接
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Demo</title>
+  </head>
+  <body>
+    <script>
+      // 滑动窗口法/两根手指法
+      const lengthOfLongestSubstring = (str) => {
+        if (str.length <= 1) {
+          return str.length;
+        }
+        let max = 0;
+        let f1 = 0;
+        let f2 = 1;
+        while (f2 < str.length) {
+          let sameIndex = -1;
+          for (let i = f1; i < f2; i++) {
+            if (str[i] === str[f2]) {
+              sameIndex = i;
+              break;
+            }
+          }
+          let tempMax;
+          if (sameIndex >= 0) {
+            tempMax = f2 - f1;
+            f1 = sameIndex + 1; // 左手向前移动
+          } else {
+            tempMax = f2 - f1 + 1;
+          }
+          if (tempMax > max) {
+            max = tempMax;
+          }
+          f2 += 1;
+        }
+        return max;
+      };
+      console.log(lengthOfLongestSubstring('abcabcbb')); // 3
+    </script>
+  </body>
+</html>
