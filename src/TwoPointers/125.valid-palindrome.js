@@ -15,4 +15,4 @@ const isPalindrome = function (s) {
   }
   return true;
 };
-module.exports = isPalindrome;
+export { isPalindrome };

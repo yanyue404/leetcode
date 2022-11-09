@@ -8,37 +8,17 @@
   </head>
   <body>
     <script>
-      // 滑动窗口法/两根手指法
-      const lengthOfLongestSubstring = (str) => {
-        if (str.length <= 1) {
-          return str.length;
+      var removeDuplicates = function (nums) {
+        let i = 0;
+        for (let j = 0, len = nums.length; j < len; j++) {
+          if (nums[j] != nums[j + 1]) {
+            nums[i] = nums[j];
+            i++;
+          }
         }
-        let max = 0;
-        let f1 = 0;
-        let f2 = 1;
-        while (f2 < str.length) {
-          let sameIndex = -1;
-          for (let i = f1; i < f2; i++) {
-            if (str[i] === str[f2]) {
-              sameIndex = i;
-              break;
-            }
-          }
-          let tempMax;
-          if (sameIndex >= 0) {
-            tempMax = f2 - f1;
-            f1 = sameIndex + 1; // 左手向前移动
-          } else {
-            tempMax = f2 - f1 + 1;
-          }
-          if (tempMax > max) {
-            max = tempMax;
-          }
-          f2 += 1;
-        }
-        return max;
+        return i;
       };
-      console.log(lengthOfLongestSubstring('abcabcbb')); // 3
+      console.log(removeDuplicates([[1,1,2]));
     </script>
   </body>
 </html>

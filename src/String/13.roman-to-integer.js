@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {number}
  */
-var romanToInt = function (s) {
+var romanToInt1 = function (s) {
   var hashNum = {
     I: 1,
     V: 5,
@@ -21,7 +21,7 @@ var romanToInt = function (s) {
   return result;
 };
 
-var romanToInt999 = function (s) {
+var romanToInt2 = function (s) {
   const toN = (roman) => {
     const obj = {
       I: 1,
@@ -78,7 +78,4 @@ var romanToInt999 = function (s) {
   return getSum(result);
 };
 
-module.exports = {
-  romanToInt,
-  romanToInt999,
-};
+export { romanToInt1, romanToInt2 };

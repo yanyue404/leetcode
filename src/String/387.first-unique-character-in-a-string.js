@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {number}
  */
-var firstUniqChar = function (s) {
+var firstUniqChar1 = function (s) {
   for (let i = 0; i < s.length; i++) {
     if (i == s.indexOf(s[i]) && i == s.lastIndexOf(s[i])) {
       return i;
@@ -26,7 +26,4 @@ var firstUniqChar2 = function (s) {
   return s.split('').findIndex((v) => obj[v] === 1);
 };
 
-module.exports = {
-  firstUniqChar,
-  firstUniqChar2,
-};
+export { firstUniqChar1, firstUniqChar2 };

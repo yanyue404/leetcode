@@ -1,7 +1,9 @@
 'use strict';
 require('mocha');
-var expect = require('chai').expect;
-const isPalindrome = require('../src/String/125.valid-palindrome');
+import chai from 'chai';
+let expect = chai.expect;
+
+import { isPalindrome } from '../src/TwoPointers/125.valid-palindrome';
 
 describe('isPalindrome', function () {
   it('should return true', function () {
